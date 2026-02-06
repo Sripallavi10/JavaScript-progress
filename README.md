@@ -71,3 +71,54 @@ var x = 10;
 Function scoped
 
 Causes bugs
+
+🔹 FUNCTIONS in JavaScript
+What a function really is
+A function is a reusable block of logic.
+
+Instead of repeating code, you wrap it.
+
+Function Declaration (classic)
+function add(a, b) {
+    return a + b;
+}
+Call it:
+
+add(2, 3); // 5
+Function Expression
+const multiply = function(a, b) {
+    return a * b;
+};
+Used when assigning functions to variables.
+
+Arrow Function (modern & common)
+const subtract = (a, b) => {
+    return a - b;
+};
+Short version:
+
+const subtract = (a, b) => a - b;
+🔹 Parameters vs Arguments (DON’T CONFUSE)
+function greet(name) {   // parameter
+    console.log(name);
+}
+
+greet("Pallavi");        // argument
+🔹 Return vs Console.log (BIG beginner mistake)
+function add(a, b) {
+    console.log(a + b); // prints only
+}
+❌ You cannot use the result later.
+
+Correct:
+
+function add(a, b) {
+    return a + b;
+}
+🔹 Scope (WHY your code breaks)
+let x = 10;
+
+function test() {
+    let y = 5;
+}
+
