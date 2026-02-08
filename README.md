@@ -231,4 +231,96 @@ let isDarkMode = false;
 if (!isDarkMode) {
     console.log("Light mode is ON");
 }
+What is a Coin Flip Game?
+
+A coin flip game simulates flipping a coin:
+
+Two possible outcomes: Heads or Tails
+
+Computer randomly chooses one
+
+User selects Heads or Tails
+
+Game checks win or lose
+
+Core Concepts Used
+
+This game teaches you:
+
+✅ Booleans
+
+✅ Math.random()
+
+✅ if / else
+
+✅ Functions
+
+✅ Basic DOM manipulation
+
+Game Logic (Very Important)
+
+User chooses Heads or Tails
+
+Computer randomly flips the coin
+
+Compare user choice with result
+
+Display You Win 🎉 or You Lose 😢
+
+Random Coin Flip Logic
+let randomNumber = Math.random(); // 0 to 0.999
+let coin = randomNumber < 0.5 ? "Heads" : "Tails";
+
+
+👉 Math.random() gives a random number
+👉 < 0.5 decides Heads or Tails
+
+Simple Coin Flip Game (HTML + JS)
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coin Flip Game</title>
+</head>
+<body>
+
+    <h2>Coin Flip Game</h2>
+
+    <button onclick="flipCoin('Heads')">Heads</button>
+    <button onclick="flipCoin('Tails')">Tails</button>
+
+    <p id="result"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+JavaScript (script.js)
+function flipCoin(userChoice) {
+
+    let randomNumber = Math.random();
+    let coinResult = randomNumber < 0.5 ? "Heads" : "Tails";
+
+    let isWin = (userChoice === coinResult); // boolean
+
+    if (isWin) {
+        document.getElementById("result").innerText =
+            "You chose " + userChoice +
+            ". Coin is " + coinResult +
+            ". You WIN 🎉";
+    } else {
+        document.getElementById("result").innerText =
+            "You chose " + userChoice +
+            ". Coin is " + coinResult +
+            ". You LOSE 😢";
+    }
+}
+
+Where Booleans Are Used
+let isWin = (userChoice === coinResult);
+
+
+true → win
+
+false → lose
 
