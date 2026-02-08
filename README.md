@@ -121,4 +121,114 @@ let x = 10;
 function test() {
     let y = 5;
 }
+What is a Boolean?
+
+A Boolean is a data type that has only two values:
+
+true
+false
+
+
+That’s it. No in-between. Think YES / NO, ON / OFF, 1 / 0.
+
+Creating Booleans
+let isLoggedIn = true;
+let isAdmin = false;
+
+
+You don’t need quotes — "true" is a string, not a boolean ❌
+
+Booleans from Comparisons
+
+Most booleans come from comparisons:
+
+5 > 3        // true
+10 < 5       // false
+5 == 5       // true
+5 != 3       // true
+
+Strict comparison (important!)
+5 == "5"     // true  (checks value only)
+5 === "5"    // false (checks value + type)
+
+
+👉 Always prefer === in real projects.
+
+Booleans in Conditions (Very Important)
+
+Booleans are mainly used in if, else, and loops.
+
+let age = 18;
+
+if (age >= 18) {
+    console.log("You can vote");
+} else {
+    console.log("You cannot vote");
+}
+
+Boolean Logical Operators
+AND (&&)
+true && true   // true
+true && false  // false
+
+OR (||)
+true || false  // true
+false || false // false
+
+NOT (!)
+!true   // false
+!false  // true
+
+
+Example:
+
+let isLoggedIn = true;
+let hasPermission = false;
+
+if (isLoggedIn && hasPermission) {
+    console.log("Access granted");
+} else {
+    console.log("Access denied");
+}
+
+Truthy and Falsy Values
+
+Some values behave like false even if they’re not booleans.
+
+Falsy values:
+false
+0
+""
+null
+undefined
+NaN
+
+
+Everything else is truthy 😎
+
+Example:
+
+if ("hello") {
+    console.log("This runs"); // true
+}
+
+if (0) {
+    console.log("This won't run");
+}
+
+Boolean Function
+
+You can convert values to boolean:
+
+Boolean(1);        // true
+Boolean(0);        // false
+Boolean("Hi");     // true
+Boolean("");       // false
+
+Real-Life Example
+let isDarkMode = false;
+
+if (!isDarkMode) {
+    console.log("Light mode is ON");
+}
 
