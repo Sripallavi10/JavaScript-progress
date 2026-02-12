@@ -324,3 +324,88 @@ true → win
 
 false → lose
 
+Rock Paper Scissors Game – Concept
+
+The game has:
+
+👊 Rock
+
+✋ Paper
+
+✂️ Scissors
+
+Rules:
+
+Rock beats Scissors
+
+Scissors beats Paper
+
+Paper beats Rock
+
+Same choice = Draw
+
+🧠 How It Works in JavaScript
+Step 1: Get User Choice
+
+User selects:
+
+"rock"
+
+"paper"
+
+"scissors"
+
+This can be done using:
+
+prompt() (simple version)
+
+Buttons (better version using HTML)
+
+Step 2: Generate Computer Choice (Randomly)
+
+JavaScript has Math.random().
+
+Math.random()
+
+It generates a random number between 0 and 1.
+
+To pick rock/paper/scissors:
+
+let randomNumber = Math.random();
+
+
+let computerChoice;
+
+
+if (randomNumber < 0.33) {
+    computerChoice = "rock";
+} else if (randomNumber < 0.66) {
+    computerChoice = "paper";
+} else {
+    computerChoice = "scissors";
+}
+Step 3: Compare Choices (Game Logic)
+
+We use if-else:
+
+if (userChoice === computerChoice) {
+    result = "It's a Draw!";
+}
+else if (
+    (userChoice === "rock" && computerChoice === "scissors") ||
+    (userChoice === "paper" && computerChoice === "rock") ||
+    (userChoice === "scissors" && computerChoice === "paper")
+) {
+    result = "You Win!";
+}
+else {
+    result = "You Lose!";
+}
+
+This checks:
+
+If both are same → Draw
+
+If user winning condition → Win
+
+Otherwise → Lose
